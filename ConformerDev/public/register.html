@@ -1,0 +1,90 @@
+
+
+
+
+<html lang="en">
+    <head>
+			{% load static %}
+{% load crispy_forms_tags %}
+        <!-- Title -->
+        <title>Conformer Developer Edition | Register</title>
+
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta charset="UTF-8">
+        <meta name="description" content="Admin Dashboard Template" />
+        <meta name="keywords" content="admin,dashboard" />
+        <meta name="author" content="stacks" />
+
+        <!-- Styles -->
+				<link href="{% static 'assets/plugins/pace-master/themes/blue/pace-theme-flash.css' %}" rel="stylesheet"/>
+        <link href="{% static 'assets/plugins/uniform/css/default.css' %}" rel="stylesheet"/>
+        <link href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/plugins/fontawesome/css/font-awesome.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/plugins/line-icons/simple-line-icons.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/plugins/offcanvasmenueffects/css/menu_cornerbox.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/plugins/waves/waves.min.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/plugins/switchery/switchery.min.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/plugins/3d-bold-navigation/css/style.css' %}" rel="stylesheet" type="text/css"/>
+
+        <!-- Theme Styles -->
+        <link href="{% static 'assets/css/meteor.min.css' %}" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/css/layers/light-layer.css' %}" class="theme-color" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'assets/css/custom.css' %}" rel="stylesheet" type="text/css"/>
+
+        <script src="{% static 'assets/plugins/3d-bold-navigation/js/modernizr.js' %}"></script>
+        <script src="{% static 'assets/plugins/offcanvasmenueffects/js/snap.svg-min.js' %}"></script>
+
+
+
+
+    </head>
+    <body class="page-register-alt">
+        <main class="page-content">
+            <div class="page-inner">
+                <div id="main-wrapper">
+                    <div class="row">
+                        <div class="col-md-3 col-register-box-alt">
+                            <div class="panel panel-white register-box" id="js-alerts">
+                                <div class="panel-body">
+
+                                    <p class="m-t-md">Create an account.</p>
+                                    <form class="m-t-md" method="post">
+																			  {% csrf_token %}
+																				{{ register_form|crispy }}
+																					<button class="btn btn-primary" type="submit">Register</button>
+																		</form>
+
+																		{% for message in messages %}
+																		<div class="alert alert-danger alert-dismissible" role="alert">
+																						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+																						 {{ message }}
+																		</div>
+																		 {% endfor %}
+
+																					<p class="text-center">If you already have an account, <a href="login">login</a> instead.</p>
+                                    			<p class="text-center m-t-xs text-sm register-footer">2016 &copy; @ictashik</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Row -->
+                </div><!-- Main Wrapper -->
+            </div><!-- Page Inner -->
+        </main><!-- Page Content -->
+
+
+        <!-- Javascripts -->
+				<script src="{% static 'assets/plugins/jquery/jquery-3.1.0.min.js' %}"></script>
+        <script src="{% static 'assets/plugins/jquery-ui/jquery-ui.min.js' %}"></script>
+        <script src="{% static 'assets/plugins/pace-master/pace.min.js' %}"></script>
+        <script src="{% static 'assets/plugins/jquery-blockui/jquery.blockui.js' %}"></script>
+        <script src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js' %}"></script>
+        <script src="{% static 'assets/plugins/switchery/switchery.min.js' %}"></script>
+        <script src="{% static 'assets/plugins/uniform/js/jquery.uniform.standalone.js' %}"></script>
+        <script src="{% static 'assets/plugins/offcanvasmenueffects/js/classie.js' %}"></script>
+        <script src="{% static 'assets/plugins/waves/waves.min.js' %}"></script>
+        <script src="{% static 'assets/js/meteor.min.js' %}"></script>
+        <script src="{% static 'assets/js/pages/lr-alt.js' %}"></script>
+
+    </body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+<div class="row">
+                        <div class="col-md-4 center">
+                            <div class="panel panel-white" id="js-alerts">
+                                <div class="panel-body">
+                                    <h1 class="text-xxl text-danger text-center">Done</h1>
+                                    <div class="details">
+                                        <h3>The Repository ha been cloned</h3>
+                                    </div>
+
+                                    <a class="btn btn-primary" href="file/?path={{ title }}">Show Cloned Directory</a>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+{% endblock %}

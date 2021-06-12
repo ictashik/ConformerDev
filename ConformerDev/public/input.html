@@ -1,0 +1,25 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+
+
+<h1 class="h1"></h1>
+<h4>Conformance Accessibility Evaulator</h4>
+
+<div class="col-md-12">
+  <form action="eval" method="POST">
+      {% csrf_token %}
+
+      <textarea id="txtCode" class="form-control" name="code" rows="12" cols="50" required>
+    </textarea>
+
+      <button class="btn-primary" type="submit" >Evaluate</button>
+  </form>
+
+</div>
+
+
+
+
+{% endblock %}

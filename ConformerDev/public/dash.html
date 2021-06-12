@@ -1,0 +1,231 @@
+{% extends 'basic.html' %}
+
+  {% load static %}
+{% block content %}
+<br>
+<br>
+
+
+
+{% for message in messages %}
+<div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+         {{ message }}
+</div>
+ {% endfor %}
+
+
+
+
+
+
+<br>
+
+<div class="row">
+
+</div>
+
+
+<div class="row">
+  <div class="col-md-6">
+
+
+
+<div class="panel panel-white">
+<div class="panel-body">
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Project Title</th>
+<th>Description</th>
+<th></th>
+<th></th>
+<th></th>
+
+</tr>
+</thead>
+<tbody>
+
+
+{% for item in objs %}
+   <tr>
+     <form action="http://127.0.0.1:8000/GitClone" method="post">
+        <td style="font-weight: bold;color: #630575;">{{ item.title }}</td>
+        <td>{{ item.description }}</td>
+        <td><a href="{{ item.git_url }}" target="blank" class="btn btn-primary btn-rounded">Git Repo</a></td>
+        {%csrf_token%}
+        <td><a href="file/?path={{item.title }}" class="btn btn-success btn-rounded">Project Folder</a></td>
+        <input type="hidden" id="prtitle" name="HFIDtitle" value="{{item.title}}">
+        <input type="hidden" id="prgit" name="HFIDgit" value="{{item.git_url}}">
+        <td><input class="btn btn-info btn-rounded" type="submit" value="Clone Git Repo"></td>
+</form>
+
+   </tr>
+      {% endfor %}
+
+
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+
+</div>
+
+<div class="col-md-4">
+  <div class="panel panel-white">
+                          <div class="panel-heading clearfix">
+                              <h4 class="panel-title">Summary</h4>
+                          </div>
+                          <div class="panel-body" style="text-align: center;">
+                            <div class="row">
+                              <div class="col-md-4">
+                                <h1 style="font-weight: 700;">{{ projectsCount }}</h1>
+                                <h5>Projects</h5>
+                              </div>
+                              <div class="col-md-4">
+                                <h1 style="font-weight: 700; color: red">{{ testCount }}</h1>
+                                <h5>Tests Conducted</h5>
+                              </div>
+                              <div class="col-md-4">
+                                <h1 style="font-weight: 700; color: red">{{ errorCount }}</h1>
+                                <h5>Error Encountered</h5>
+                              </div>
+                              <br>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <h1 style="font-weight: 700;">{{ aeCount }}</h1>
+                                <h5>Accessibility Exceptions</h5>
+                              </div>
+                              <div class="col-md-6">
+                                <h1 style="font-weight: 700;">{{ svCount }}</h1>
+                                <h5>Static HTML Validation Error</h5>
+                              </div>
+                            </div>
+
+
+
+                          </div>
+                      </div>
+                                <div class="panel panel-white">
+                                                <div class="panel-heading clearfix">
+                                                    <h4 class="panel-title">Erros Summary</h4>
+                                                </div>
+                                                <div class="panel-body" style="text-align: center;">
+                                                  <div>
+                                                    <script type="text/javascript">
+                                                        window.addEventListener("load", function(){
+                                                      var data2 = {
+                                                        labels: ["ALT Tag", "Hierarchical", "Colors", "Obsolete Code", "Infrastructure"],
+                                                        datasets: [
+                                                        {
+                                                          label: "Accessibility Error",
+                                                          backgroundColor: [
+                                                          'rgba(255, 99, 132, 0.2)',
+                                                          'rgba(54, 162, 235, 0.2)',
+                                                          'rgba(255, 206, 86, 0.2)',
+                                                          'rgba(75, 192, 192, 0.2)',
+                                                          'rgba(153, 102, 255, 0.2)',
+
+                                                          ],
+                                                          borderColor: [
+                                                          'rgba(255,99,132,1)',
+                                                          'rgba(54, 162, 235, 1)',
+                                                          'rgba(255, 206, 86, 1)',
+                                                          'rgba(75, 192, 192, 1)',
+                                                          'rgba(153, 102, 255, 1)',
+                                                          ],
+                                                          borderWidth: 1,
+                                                          data: [{{ MAT }}, {{ HER }}, {{ COL }}, {{ OBS }}, {{ TIT }}],
+                                                        }
+                                                        ]
+                                                      };
+
+                                                      var ctx2 = $("#chart2");
+                                                      var myBarChart = new Chart(ctx2, {
+                                                        type: 'bar',
+                                                        data: data2,
+                                                        options: {
+                                                          scales: {
+                                                            yAxes: [{
+                                                              ticks: {
+                                                                beginAtZero:true
+                                                              }
+                                                            }]
+                                                          },
+                                                          legend: {
+                                                            display: false
+                                                          }
+                                                        }
+                                                      });
+                                                    });
+                                                    </script>
+                                                    <canvas id="chart2" height="150px"></canvas>
+                                                  </div>
+
+                                                  </div>
+                                                </div>
+
+
+
+
+</div>
+<div class="col-md-2">
+
+
+    <div class="panel panel-white">
+      <div class="panel-heading">
+          <h3 class="panel-title">Quick Access Tools</h3>
+      </div>
+        <div class="panel-body">
+<div class="btn-group-vertical m-t-lg" role="group" aria-label="Vertical button group" style="width:100%;">
+            <a href="Addproject" style="width:100%;left:0;text-align:left" role="button" class="btn btn-primary "><i class="icon-notebook"></i>&nbsp&nbsp New Project</a>
+
+            <a href="RECTests" style="width:100%;left:0;text-align:left" role="button" class="btn btn-success"><span class="align-left"><i class="icon-compass"></i></span> &nbsp&nbspRecent Tests</a>
+            <a href="WCAGChecklist" style="width:100%;left:0;text-align:left" role="button" class="btn btn-info"><i class="icon-check"></i>&nbsp&nbspChecklist</a>
+            <a href="WCAGMap" style="width:100%;left:0;text-align:left" role="button" class="btn btn-warning"><i class="icon-map"></i>&nbsp&nbspMap</a>
+            <a href="file/?path=" style="width:100%;left:0;text-align:left" role="button" class="btn btn-danger"><i class="icon-folder"></i>&nbsp&nbspRoot Folder</a>
+</div>
+</div>
+            </div>
+
+
+                              <div class="panel panel-white">
+                                  <div class="panel-heading">
+                                      <h3 class="panel-title">Cloud Storage File Statistics</h3>
+                                  </div>
+                                  <div class="panel-body">
+                                      <div id="morris4" style="min-height:250px;">
+                                        <script type="text/javascript">
+
+                                          window.addEventListener("load", function(){
+                                          Morris.Donut({
+                                            element: 'morris4',
+                                            data: [
+                                            { label: 'HTML', value: {{ FCHTML }} },
+                                            { label: 'Stylesheets', value: {{ FCCSS }} },
+                                            { label: 'JavaScript', value: {{ FCJS }} },
+                                            { label: 'Pictures', value: {{ FCJPG }} },
+                                            { label: 'Raster', value: {{ FCPNG }} },
+                                            { label: 'Fonts', value: {{ FCTTF }} }
+                                            ],
+                                            resize: true,
+                                            colors: ['3c1361', '#52307c', '#663a82', '#7c5295', '#b491c8', '#bca0dc'],
+                                          });
+                                        });
+
+                                        </script>
+
+                                      </div>
+                                  </div>
+                              </div>
+
+
+
+
+
+</div>
+
+<data value></data>
+
+{% endblock %}

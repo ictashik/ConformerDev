@@ -1,0 +1,974 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+<br>
+<br>
+<div class="row">
+
+<div name="A" class="col-md-6">
+                            <div class="panel panel-white">
+                                <div class="panel-heading clearfix">
+                                    <h4 class="panel-title">WCAG 2.1 Level A Checklist</h4>
+                                </div>
+                                <div class="panel-body">
+                                  <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+                                           <div class="panel panel-primary">
+                                               <div class="panel-heading" role="tab" id="headingOne1">
+                                                   <h4 class="panel-title">
+                                                       <a data-toggle="collapse" data-parent="#accordion2" href="#1" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                                                           Percievable
+                                                       </a>
+                                                   </h4>
+                                               </div>
+                                               <div id="1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne1" aria-expanded="false" style="height: 0px;">
+                                                   <div class="panel-body">
+                                                     <table class="table table-striped">
+<tbody>
+<tr>
+<th id="c1">Check-point</th>
+<th id="c2">Summary</th>
+<th id="c3">Points to Ponder</th>
+</tr>
+<tr>
+<td id="g1" colspan="3">
+<h4>Guideline 1.1: Text Alternatives</h4>
+</td>
+</tr>
+<tr>
+<th headers="c1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-1-1-non-text-content/">1.1.1 Non-text content</a></th>
+<td headers="c2">All informative and functional non-text content such as images, icons, charts, image<br>maps etc must have alternative text that describes the meaning or purpose</td>
+<td headers="c3">
+<ul>
+<li>Always provide alternative options like audio or OTP (one time password) for CAPTCHA.</li>
+<li>Always provide textual summary or description for complex charts and graphs apart form shot alt text.</li>
+<li>Always use title attribute for additional info while using alt attribute in image links.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td id="g2" colspan="3">
+<h4>Guideline 1.2: Time-based Media:</h4>
+</td>
+</tr>
+<tr>
+<th headers="c1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-2-1-audio-only-and-video-only-prerecorded/">1.2.1 Audio-only and Video-only (Prerecorded)</a></th>
+<td headers="c2">Text description must be provided for prerecorded audio only content. Either a text<br>description or an audio description must be provided for prerecorded video only content</td>
+<td headers="c3">
+<ul>
+<li>Provide text transcripts for audio tracks.</li>
+<li>Provide either text transcript or an audio track for a silent video.</li>
+<li>If an audio is provided for video then text transcript is not required. (Exception)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="c1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-2-2-captions-prerecorded/">1.2.2 Captions (Prerecorded)</a></th>
+<td headers="c2">Captions must be provided for the entire audio content in prerecorded synchronized<br>media.</td>
+<td headers="c3">
+<ul>
+<li>Provide captions for the video that has audio.</li>
+<li>If video is the alternative for text content then it doesn’t need captions. (Exception)</li>
+<li>If possible provide captions in multiple languages as this helps users to choose the language they can follow.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="c1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-2-3-audio-description-or-media-alternative-prerecorded/">1.2.3 Audio Description or Media Alternative (Prerecorded)</a></th>
+<td headers="c2">Either a text description or an audio description must be provided for prerecorded<br>video content of the synchronized media</td>
+<td headers="c3">
+<ul>
+<li>Provide audio descriptions if possible or</li>
+<li>Provide text transcripts for the video.</li>
+<li>Videos that rely on sound only doesn’t require audio descriptions. Example: interviews, speeches.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td id="g3" colspan="3">
+<h4>Guideline 1.3: Adaptable</h4>
+</td>
+</tr>
+<tr>
+<th headers="c1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-3-1-info-and-relationship/">1.3.1 Info and relationships</a></th>
+<td headers="c2">Information, structure, and relationships conveyed through presentation can be<br>programmatically determined or are available in text. Eg: properly marked headings, associating<br>labels with form elements etc.</td>
+<td headers="c3">
+<ul>
+<li>Emphasis – Use &lt;em&gt; and &lt;strong&gt; instead of using Italics and Bold texts to highlight important texts; use &lt;blockquote&gt; to mark quotations</li>
+<li>Headings – Provide hierarchically logical heading markup for the contents</li>
+<li>Table – Provide HTML table markup and provide column headers for simple tables and column headers and row headers for complex tables</li>
+<li>Table – When using nested tables, consider the possibility of breaking the content into logical individual tables instead of nested tables</li>
+<li>Forms – Provide programmatic association of visible labels or appropriate accessible names to all the form elements</li>
+<li>Lists – Markup the contents that logically fall into list as ordered or unordered list. Do not put huge text blocks which is otherwise are paragraphs ass lists</li>
+<li>Grouping – Provide grouping and group level labels to mark a group of form elements like radio buttons or checkboxes; use &lt;fieldset&gt; and legend to achieve grouping and group level association for native form elements; use ARIA to achieve the same where custom form controls are used</li>
+<li>Use native semantic markup frequently and ARIA sparingly.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="c1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-3-2-meaningful-sequence/">1.3.2 Meaningful Sequence</a></th>
+<td headers="c2">Content on the page/screen must be in a meaningful sequence when accessed by different<br>assistive technologies or user agents.</td>
+<td headers="c3">
+<ul>
+<li>Make sure that content presented on the page is logical &amp; intuitive.</li>
+<li>Write HTML first &amp; then manage design with CSS.</li>
+<li>Make sure visual order matches the DOM order.</li>
+<li>Use headings, lists, paragraphs etc to mark your content.</li>
+<li>Make sure your users can differentiate the navigation menus from main content.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="c1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-3-3-sensory-characteristics/">1.3.3 Sensory Characteristics</a></th>
+<td headers="c2">Sound, size, shape, visual location or orientation should not be the only way of<br>providing instructions or information to the user.</td>
+<td headers="c3">
+<ul>
+<li>While using shape and or location, provide visible labels/names to the controls</li>
+<li>When combining color and shape/size/location/orientation, provide off-screen text for screen reader users</li>
+<li>When using sound as a clue, combine it with text/color based clues.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td id="g4" colspan="3">
+<h4>Guideline 1.4: Distinguishable</h4>
+</td>
+</tr>
+<tr>
+<th headers="c1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-4-1-use-of-color/">1.4.1 Use of Color</a></th>
+<td headers="c2">Provide additional cues when color is used as only visual means to convey<br>information, indicating an action, prompting a response or distinguishing a visual element.</td>
+<td headers="c3">
+<ul>
+<li>Don’t use color as sole method to convey information.</li>
+<li>Make sure instructions/prompts provided in text don’t refer to color alone.</li>
+<li>Make sure instructions are provided in text for graphs &amp; charts where color is used to convey information.</li>
+<li>Provide more than one visual clue that include common icons and colors to differentiate texts and user interface elements.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="c1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-4-2-audio-control/">1.4.2 Audio Control</a></th>
+<td headers="c2">Take care that no audio is automatically played for more than 3 seconds when the page<br>first loads.</td>
+<td headers="c3">
+<ul>
+<li>Don’t play audio automatically if possible.</li>
+<li>Make sure your audio is less than 3 seconds.</li>
+<li>If audio is more than 3 seconds then provide a pause/stop or a mechanism to control the audio player volume from the overall system volume.</li>
+<li>Make sure that focus is on the pause/stop or volume control as soon as page opens if audio is playing automatically.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="panel panel-success">
+                                               <div class="panel-heading" role="tab" id="headingTwo2">
+                                                   <h4 class="panel-title">
+                                                       <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#2" aria-expanded="false" aria-controls="collapseTwo">
+                                                           Operable
+                                                       </a>
+                                                   </h4>
+                                               </div>
+                                               <div id="2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo2" aria-expanded="false" style="height: 0px;">
+                                                   <div class="panel-body">
+                                                     <table class="table table-striped">
+<tbody>
+<tr>
+<th id="c4">Check-point</th>
+<th id="c5">Summary</th>
+<th id="c6">Points to Ponder</th>
+</tr>
+<tr>
+<td id="g5" colspan="3">
+<h4>Guideline 2.1: Keyboard Accessible</h4>
+</td>
+</tr>
+<tr>
+<th headers="c4" scope="row"><a href="https://www.digitala11y.com/understanding-sc-2-1-1-keyboard/">2.1.1 Keyboard</a></th>
+<td headers="c5">Make sure that all the focusable elements of the web page can be navigated with<br>keyboard and all the actions such as filling up text fields, selecting an option, activating a link,<br>submitting a form etc can be done by keyboard alone</td>
+<td headers="c6">
+<ul>
+<li>Make sure all elements on the page buttons, links, form controls etc. are reachable by tab key.</li>
+<li>Make sure that users are able to activate the buttons, links &amp; form controls using the enter and/or spacebar keys.</li>
+<li>Write clean HTML &amp; CSS as it is keyboard operable by default &amp; doesn’t require any special tweaks.</li>
+<li>Make sure that there is a visible focus for all the active elements on the page.</li>
+<li>Make sure that focus order is logical &amp; intuitive.</li>
+<li>Provide tabindex=0 for custom UI elements so that they are focusable.</li>
+<li>Provide appropriate event handlers for custom scripted elements so that they are operable by their respective keys.</li>
+<li>Avoid access keys if possible. If not, at least, ensure they don’t conflict with the user agent and/or AT shortcut keys.</li>
+<li>Make sure that there is no time limit to perform any action using the keyboard when more than one key is required to operate a control.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="c4" scope="row"><a href="https://www.digitala11y.com/understanding-sc-2-1-2-no-keyboard-trap/">2.1.2 No Keyboard trap</a></th>
+<td headers="c5">Make sure that keyboard focus is not trapped within a portion of the page or within a<br>component. If focus should be trapped within the component provide a mechanism such as short-cut<br>command to exit from the component using a keyboard. The method of exiting the component should be<br>informed to the user before using it.</td>
+<td headers="c6">
+<ul>
+<li>Make sure that users can tab to &amp; away from all parts of the site.</li>
+<li>If a user is trapped on a portion of the web page for a purpose, a clear instruction must be provided for the user to end that keyboard trap.</li>
+<li>Check if all parts of the site is operable using only keyboard, test by unplugging the mouse.</li>
+<li>Stick to standard navigation as much as possible like tab, shift+tab &amp; arrow keys.</li>
+<li>If custom keystrokes are provided to operate a control make sure hints are exposed to all users.</li>
+<li>Make sure your third party widgets are accessible, most of the time they cause major keyboard operability issues.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="c4" scope="row"><a href="https://www.digitala11y.com/understanding-sc-2-1-4-character-key-shortcuts/">2.1.4 Character Key Shortcuts</a></th>
+<td headers="c5">If a keyboard shortcut is implemented in content using only letter (including upper-<br>and lower-case letters), punctuation, number, or symbol characters, then at least one of the<br>following is true:<br>Turn off:<br>A mechanism is available to turn the shortcut off;<br>Remap:<br>A mechanism is available to remap the shortcut to use one or more non-printable keyboard characters<br>(e.g. Ctrl, Alt, etc);<br>Active only on focus:<br>The keyboard shortcut for a user interface component is only active when that component has focus.</td>
+<td style="text-align: left;" headers="c6">
+<ul>
+<li>Don’t use single character key shortcuts if possible.</li>
+<li>Provide a mechanism to turn off the character key shortcuts.</li>
+<li>design all the keyboard shortcuts with the combinations of non-printable keys.</li>
+<li>Let the user trigger the shortcut key only when the element has keyboard focus.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td id="g6" colspan="3">
+<h4>Guideline 2.2 Enough Time</h4>
+</td>
+</tr>
+<tr>
+<th headers="c4" scope="row"><a href="https://www.digitala11y.com/understanding-sc-2-2-1-timing-adjustable/">2.2.1 Timing Adjustable</a></th>
+<td headers="c5">When a session time out is part of the application, ensure that an accessible mechanism<br>of adjusting, extending or turning off the time limit is available.</td>
+<td headers="c6">
+<ul>
+<li>Provide a control on the landing page for the user to initiate a longer session time or no session timeout.</li>
+<li>Provide a way for the user to turn off the session time out.</li>
+<li>Provide a means to set the time limit to 10 times the default time limit.</li>
+<li>Prompt the user with help of a pop-up or modal so that enough warning is available for the user to reset the time limit.</li>
+<li>Make sure controls provided to extend the time limit are keyboard operable.</li>
+<li>Moving, scrolling and/or blinking content must have mechanism to pause or stop the movement or scroll or blink.</li>
+<li>Auto updating content must be provided with feature to extend the time limit to 10 times of its actual update frequency.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="c4" scope="row"><a href="https://www.digitala11y.com/understanding-sc-2-2-2-pause-stop-hide/">2.2.2 Pause, Stop, Hide</a></th>
+<td headers="c5">Make sure that moving, blinking, scrolling or auto updating content on the web page can<br>be read by every user.</td>
+<td headers="c6">
+<ul>
+<li>Avoid moving, blinking scrolling content if possible.</li>
+<li>Content should not blink more than 3 times per second, if it does blink 3times per second then it is considered as flashing &amp; will fail WCAG.</li>
+<li>Auto updating content should be provided with a pause button or provide a mechanism for the user to specify when the update can happen.</li>
+<li>If the entire page contains moving, blinking, scrolling &amp; auto updating content then pause, stop or hide buttons are not required as there is no parallel content.</li>
+<li>Animation that conveys the users that a page or content is loading doesn’t require to meet this success criterion.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td id="g7" colspan="3">
+<h4>2.3 Seizures and Physical Reactions</h4>
+</td>
+</tr>
+<tr>
+<th headers="c4" scope="row"><a href="https://www.digitala11y.com/understanding-sc-2-3-1-three-flashes-or-below-threshold/">2.3.1 3 Flashes or Below Threshold</a></th>
+<td headers="c5">Ensure that no content on the web page flashes more than 3 times in one second.</td>
+<td headers="c6">
+<ul>
+<li>Avoid flashing content completely if possible.</li>
+<li>Make sure that flashing content doesn’t flash more than 3 times per second.</li>
+<li>Use <a href="https://trace.umd.edu/peat" rel="noopener">PEAT </a>to confirm if the flashing content passes this check point.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td id="g8" colspan="3">
+<h4>2.4 Navigable</h4>
+</td>
+</tr>
+<tr>
+<th headers="c4" scope="row"><a href="https://www.digitala11y.com/understanding-sc-2-4-1-bypass-blocks/">2.4.1 Bypass blocks</a></th>
+<td headers="c5">Repeated blocks of content on repeated web pages such as top navigation must be easily<br>skipped by the users those depend on assistive technologies and keyboard only.</td>
+<td headers="c6">
+<ul>
+<li>Provide a skip link on top of the page to skip navigational menus.</li>
+<li>Provide skip links to navigate to content on a large page.</li>
+<li>Make sure that skip link is visible when it receives focus.</li>
+<li>Make sure that purpose of the link is clear, provide skip link text as skip to main content or skip navigation etc.</li>
+<li>When providing ARIA landmarks, ensure multiple landmarks of the same type is not provided.</li>
+<li>If provided, ensure to use aria-label to assign unique names to such landmarks<br>“Primary navigation”, “secondary navigation” etc.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="c4" scope="row"><a href="https://www.digitala11y.com/understanding-sc-2-4-2-page-titled/">2.4.2 Page titled</a></th>
+<td headers="c5">Titles of the page should describe the topic or purpose.</td>
+<td headers="c6">
+<ul>
+<li>Provide a unique title.</li>
+<li>Make sure that title is between 50-75 characters.</li>
+<li>Make sure title of the page is the heading level H1 on the page.</li>
+<li>Title should contain web page name, bit of description &amp; site name.</li>
+<li>Make sure title describes purpose of the page.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="c4" scope="row"><a href="https://www.digitala11y.com/focus-order-understanding-sc-2-4-3/">2.4.3 Focus Order</a></th>
+<td headers="c5">Make sure that elements that recieve focus while operating or navigating the web page<br>must be sequential and meaningful.</td>
+<td headers="c6">
+<ul>
+<li>Avoid using tabindex values that are &gt;1 to manage focus order as they may supersede logical tab order</li>
+<li>Align the focus order with the reading order as much as possible in order to maintain a logical and intuitive navigation of the content. Too much deviation would put a lot of users with disabilities into confusion</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="c4" scope="row"><a href="https://www.digitala11y.com/link-purpose-in-context-understanding-sc-2-4-4/">2.4.4 Link Purpose (in context)</a></th>
+<td headers="c5">The target or purpose of the link must be identified by the link text alone or its<br>associated content or its surrounding content.</td>
+<td headers="c6">
+<ul>
+<li>Let the purpose of the link be clear just by the link text alone! E.G. “My Blog”, “Visit our Blog”.</li>
+<li>Ensure appropriate alt text is provided when only an image stands as a link.</li>
+<li>Avoid ambiguous links like “here” or “click here”. If they are required make sure that they are placed at the end of the sentence or paragraph so that they are understood from context.</li>
+<li>Do not duplicate the alt text and the link text when there is an image and the link adjacent to each other and convey the same info or lead to same destination. Rather, wrap the image with the link and provide alt=”” for the image.</li>
+<li>Ensure Links having the same link text leads to same destination.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td id="g9" colspan="3">
+<h4>Guideline 2.5 Input Modalities</h4>
+</td>
+</tr>
+<tr>
+<th headers="c4" scope="row"><a href="https://www.digitala11y.com/understanding-sc-2-5-1-pointer-gestures/">2.5.1 Pointer Gestures</a></th>
+<td headers="c5">All functionality that uses multipoint or path-based gestures for operation can be<br>operated with a single pointer without a path-based gesture, unless a multipoint or path-based<br>gesture is essential.</td>
+<td headers="c6">
+<ul>
+<li>Do not use multi-pointer or path based gesture as a sole method to control content</li>
+<li>Provide single tap or double tap/click as alternatives</li>
+<li>Always have in mind that one mode does fit for all.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="c4" scope="row"><a href="https://www.digitala11y.com/2-5-2-pointer-cancellation/">2.5.2 Pointer Cancellation</a></th>
+<td headers="c5">For functionality that can be operated using a single pointer, at least one of the following is<br>true:
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ul>
+<li>No Down-Event:<br>The down-event of the pointer is not used to execute any part of the function;</li>
+<li>Abort or Undo:<br>Completion of the function is on the up-event, and a mechanism is available to abort the<br>function before completion or to undo the function after completion;</li>
+<li>Up Reversal:<br>The up-event reverses any outcome of the preceding down-event;</li>
+<li>Essential:<br>Completing the function on the down-event is essential.</li>
+</ul>
+</td>
+<td headers="c6">
+<ul>
+<li>Ensure down event alone does not execute any functionality</li>
+<li>Ensure Up event reverses or un-does any down event based action</li>
+<li>Ensure a mechanism is available to confirm the performed action where down event executes such action</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="c4" scope="row"><a href="https://www.digitala11y.com/understanding-sc-2-5-3-label-in-name/">2.5.3 Label in Name</a></th>
+<td headers="c5">For user interface components with labels that include text or images of text, the name<br>contains the text that is presented visually.</td>
+<td headers="c6">
+<ul>
+<li>Ensure the accessible names like <a href="https://www.digitala11y.com/aria-label-properties/">aria-label</a> and alt attribute contain the exact match of the visible label</li>
+<li>Ensure the visible label text and accessible name text are not interspersed</li>
+<li>Ensure the accessible name starts exactly with the visible name.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="c4" scope="row"><a href="https://www.digitala11y.com/understanding-sc-2-5-4-motion-actuation/">2.5.4 Motion Actuation</a></th>
+<td headers="c5">Functionality that can be operated by device motion or user motion can also be operated by user<br>interface components and responding to the motion can be disabled to prevent accidental actuation,<br>except when:
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ul>
+<li>Supported Interface:<br>The motion is used to operate functionality through an accessibility supported interface;</li>
+<li>Essential: The motion is essential for the function and doing so would invalidate the<br>activity.</li>
+</ul>
+</td>
+<td headers="c6">
+<ul>
+<li>Provide alternatives where motion actuation is used</li>
+<li>Provide confirmation or cancelling mechanism</li>
+<li>Allow system settings to deactivate motion detection</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="panel panel-danger">
+                                               <div class="panel-heading" role="tab" id="headingThree3">
+                                                   <h4 class="panel-title">
+                                                       <a class="" data-toggle="collapse" data-parent="#accordion2" href="#3" aria-expanded="true" aria-controls="collapseThree">
+                                                           Understandable
+                                                       </a>
+                                                   </h4>
+                                               </div>
+                                               <div id="3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree3" aria-expanded="true" style="">
+                                                   <div class="panel-body">
+                                                     <table class="table table-striped">
+<tbody>
+<tr>
+<th id="d7">Check-point</th>
+<th id="d8">Summary</th>
+<th id="d9">Read more</th>
+</tr>
+<tr>
+<td id="ga9" colspan="3">
+<h4>Guideline 3.1: Readable</h4>
+</td>
+</tr>
+<tr>
+<th headers="d7" scope="row"><a href="https://www.digitala11y.com/understanding-sc-3-1-2-language-of-parts/">3.1.2 Language of parts</a></th>
+<td headers="d8">If any text or element on the web page has a different language than the primary<br>language, programmatically define the language for that content.</td>
+<td headers="d9">
+<ul>
+<li>Ensure to use appropriate language code (lang=”fr”) wherever the text is in other language</li>
+<li>Ensure appropriate language token is used in the lang attribute (lang=”pt-br”).</li>
+<li>Beware of the exceptions too.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td id="ga10" colspan="3">
+<h4>Guideline 3.2 Predictable</h4>
+</td>
+</tr>
+<tr>
+<th headers="d7" scope="row"><a href="https://www.digitala11y.com/3-2-3-consistent-navigation/">3.2.3 Consistent Navigation</a></th>
+<td headers="d8">Navigation mechanisms repeated on multiple web pages within a set of web pages must be<br>consistent each time they are available.</td>
+<td headers="d9">
+<ul>
+<li>keep navigational menus in the same location.</li>
+<li>present the navigational menus in the same order on all pages.</li>
+<li>Represent all the standard elements like logo, search functionality, and skip links etc. in the same location on all the pages.</li>
+<li>using a standard template will help achieve to pass the success criteria of 3.2.3 consistent navigation.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="d7" scope="row"><a href="https://www.digitala11y.com/3-2-4-consistent-identification/">3.2.4 Consistent Identification</a></th>
+<td headers="d8">Ensure that the components that have same functionality are identified consistently<br>through-out the website.</td>
+<td headers="d9">
+<ul>
+<li>Icons &amp; images that are used repeatedly and provide the same function must be provided with same alternative text.</li>
+<li>Elements with same function are named &amp; labelled consistently.</li>
+<li>Use icons/images that are consistent. For example print, twitter, Facebook etc.</li>
+<li>Images will have different meaning in different context, so will need different alternative text depending on the context.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td id="ga11" colspan="3">
+<h4>Guideline 3.3: Input Assistance</h4>
+</td>
+</tr>
+<tr>
+<th headers="d7" scope="row"><a href="https://www.digitala11y.com/understanding-sc-3-3-3-error-suggestion/">3.3.3 Error Suggestion</a></th>
+<td headers="d8">If the errors for user input are identified and suggestions for correction are known,<br>provide them if the suggestions does not jeopardize the security or purpose.</td>
+<td headers="d9">
+<ul>
+<li>Provide descriptive errors</li>
+<li>Provide visible hints that will enable the users to avoid errors during form submissions</li>
+<li>Associate the errors with form controls using aria-describedby</li>
+<li>Move the focus to the form control that has the error once validation failed, this reduces the number of key strokes</li>
+<li>Mark the required fields with asterisk visually &amp; programmatically with aria-required.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="d7" scope="row"><a href="https://www.digitala11y.com/understanding-sc-3-3-4-error-prevention-legal-financial-data/">3.3.4 Error Prevention (Legal, Financial, Data)</a></th>
+<td headers="d8">Provide a mechanism to review and confirm the submission when the form include legal,<br>financial or data.</td>
+<td headers="d9">
+<ul>
+<li>Make sure proper hints are provided to fill the data in the forms</li>
+<li>Provide a review information screen where user provided information is populated</li>
+<li>Provide a checkbox where user can confirm that they have reviewed all the information and they are ready to submit; enable the submit button only when user checks the checkbox</li>
+<li>Provide confirmation screen or dialogue when users delete any data.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="panel panel-info">
+                                               <div class="panel-heading" role="tab" id="headingThree3">
+                                                   <h4 class="panel-title">
+                                                       <a class="" data-toggle="collapse" data-parent="#accordion2" href="#4" aria-expanded="true" aria-controls="collapseThree">
+                                                           Robust
+                                                       </a>
+                                                   </h4>
+                                               </div>
+                                               <div id="4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree3" aria-expanded="true" style="">
+                                                   <div class="panel-body">
+                                                     <table class="table table-striped" >
+<tbody>
+<tr>
+<th id="d10">Check point</th>
+<th id="d11">Summary</th>
+<th id="d12">Points to Ponder</th>
+</tr>
+<tr>
+<td id="ga13" colspan="3">
+<h4>Guideline 4.1 Compatible</h4>
+</td>
+</tr>
+<tr>
+<th headers="d10" scope="row"><a href="https://www.digitala11y.com/understanding-sc-4-1-3-status-messages/">4.1.3 Status Messages</a></th>
+<td headers="d11">In content implemented using markup languages, status messages can be programmatically<br>determined through role or properties such that they can be presented to the user by assistive<br>technologies without receiving focus.</td>
+<td headers="d12">
+<ul>
+<li>Ensure all success toasts and error messages are announced by screen reader</li>
+<li>Do not fill the pages with live regions. Decide which is an important update and qualifies a status message intelligently</li>
+<li>Ensure focusable messages are not considered as status messages.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+                                                   </div>
+                                               </div>
+                                           </div>
+
+                                       </div>
+                                   </div>
+                                </div>
+                            </div>
+
+<div name="AA" class="col-md-6">
+                                                        <div class="panel panel-white">
+                                                            <div class="panel-heading clearfix">
+                                                                <h4 class="panel-title">WCAG 2.1 Level AA Checklist</h4>
+                                                            </div>
+                                                            <div class="panel-body">
+                                                              <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+                                                                       <div class="panel panel-primary">
+                                                                           <div class="panel-heading" role="tab" id="headingOne1">
+                                                                               <h4 class="panel-title">
+                                                                                   <a data-toggle="collapse" data-parent="#accordion2" href="#5" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                                                                                       Percievable
+                                                                                   </a>
+                                                                               </h4>
+                                                                           </div>
+                                                                           <div id="5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne1" aria-expanded="false" style="height: 0px;">
+                                                                               <div class="panel-body">
+                                                                                 <table>
+                 <tbody>
+                 <tr>
+                 <th id="d1">Check-point</th>
+                 <th id="d2">Summary</th>
+                 <th id="d3">Points to Ponder</th>
+                 </tr>
+                 <tr>
+                 <td id="ga2" colspan="3">
+                 <h4>Guideline 1.2: Time-based Media</h4>
+                 </td>
+                 </tr>
+                 <tr>
+                 <th headers="d1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-2-4-captions-live/">1.2.4 Captions (Live)</a></th>
+                 <td headers="d2">Captions must be provided for the entire audio content in live synchronized media.</td>
+                 <td headers="d3">
+                 <ul>
+                 <li>Provide captions for a live broadcast</li>
+                 <li>Use <a href="https://www.digitala11y.com/accessible-jquery-html5-media-players/">media players </a>or broadcast platforms where live captioning is supported.</li>
+                 </ul>
+                 </td>
+                 </tr>
+                 <tr>
+                 <th headers="d1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-2-5-audio-description-prerecorded/">1.2.5 Audio Description (Prerecorded)</a></th>
+                 <td headers="d2">Ensure that an audio description is provided for the prerecorded video content in the<br>synchronized media.</td>
+                 <td headers="d3">
+                 <ul>
+                 <li>Provide audio descriptions where visual aspect is not explained in the dialog of the video</li>
+                 <li>The audio description can either be separate from the original video or be an integral part of the video</li>
+                 <li>Audio description must include scene changes, settings, actions that are described in dialogues and any other visual information that is not conveyed via a speech or dialog</li>
+                 <li>Use <a href="https://www.digitala11y.com/accessible-jquery-html5-media-players/">media players </a>that support audio descriptions.</li>
+                 </ul>
+                 </td>
+                 </tr>
+                 <tr>
+                 <td id="ga3" colspan="3">
+                 <h4>Guideline 1.3 Adaptable</h4>
+                 </td>
+                 </tr>
+                 <tr>
+                 <th headers="d1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-3-4-orientation/">1.3.4 Orientation</a></th>
+                 <td headers="d2">Content does not restrict its view and operation to a single display orientation, such<br>as portrait or landscape, unless a specific display orientation is essential.</td>
+                 <td headers="d3">
+                 <ul>
+                 <li>Don’t restrict your application or website to just work in landscape or portrait mode.</li>
+                 <li>Make sure to honor the device settings while displaying the application in landscape or portrait mode.</li>
+                 </ul>
+                 </td>
+                 </tr>
+                 <tr>
+                 <th headers="d1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-3-5-identify-input-purpose/">1.3.5 Identify Input Purpose</a></th>
+                 <td headers="d2">The purpose of each input field collecting information about the user can be programmatically<br>determined when:
+                 <p>&nbsp;</p>
+                 <ul>
+                 <li>
+                 <p>The input field serves a purpose identified in the Input Purposes for User Interface Components section; and</p>
+                 </li>
+                 <li>
+                 <p>The content is implemented using technologies with support for identifying the expected meaning for form input data.</p>
+                 </li>
+                 </ul>
+                 </td>
+                 <td headers="d3">
+                 <ul>
+                 <li>Provide programmatically determinable input purpose</li>
+                 <li>Use appropriate token values while using autocomplete attribute</li>
+                 <li>Do not use autocomplete on input fields that does not ask for user data.</li>
+                 </ul>
+                 </td>
+                 </tr>
+                 <tr>
+                 <td id="ga4" colspan="3">
+                 <h4>Guideline 1.4: Distinguishable</h4>
+                 </td>
+                 </tr>
+                 <tr>
+                 <th headers="d1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-4-3-contrast-minimum/">1.4.3 Contrast (Minimum)</a></th>
+                 <td headers="d2">Ensure that a minimum visual contrast ratio of 4.5 : 1 is maintained between the text<br>and its background. This minimum contrast ratio should also be maintained in case of images of text.</td>
+                 <td headers="d3">
+                 <ul>
+                 <li>Develop the style guide in such a way that all the texts that are crucial meet the minimum contrast</li>
+                 <li>Choose color schemes that are contrastive enough for everyone to see and read</li>
+                 <li>Provide a “Contrast” mode with the help of alternative CSS if you can’t<br>Design and develop the content with the minimum contrast requirement.</li>
+                 </ul>
+                 </td>
+                 </tr>
+                 <tr>
+                 <th headers="d1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-4-4-resize-text/">1.4.4 Resize text</a></th>
+                 <td headers="d2">Ensure that the text is resizable up to 200% without loss of content or functionality<br>and without the use of assistive technologies.</td>
+                 <td headers="d3">
+                 <ul>
+                 <li>Where browsers do not support or provide zoom functionality (IE6 as an example), provide alternative CSS for scaling purpose</li>
+                 <li>When zoomed to 200%, ensure there is no much of horizontal scrolling ( a best practice)</li>
+                 <li>Where lengthy user interface components or content like subject line of an email is there, truncate and provide ways along with the instructions to access the content.</li>
+                 </ul>
+                 </td>
+                 </tr>
+                 <tr>
+                 <th headers="d1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-4-5-image-of-text/">1.4.5 Images of text</a></th>
+                 <td headers="d2">Use real text as much as possible instead of images of text.</td>
+                 <td headers="d3">
+                 <ul>
+                 <li>Use CSS styled headings instead of Bitmap images</li>
+                 <li>Provide site-wide controls to customize the images of texts when there are dynamically generated images of texts</li>
+                 <li>Use CSS to specify spacing, alignment, color and the font family of any UI elements, their texts and icons, quotations etc</li>
+                 <li>Use keyboard generated symbols wherever possible instead of making them as images.</li>
+                 </ul>
+                 </td>
+                 </tr>
+                 <tr>
+                 <th headers="d1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-4-10-reflow/">1.4.10 Reflow</a></th>
+                 <td headers="d2">Content can be presented without loss of information or functionality, and without requiring<br>scrolling in two dimensions for:
+                 <p>&nbsp;</p>
+                 <p>&nbsp;</p>
+                 <ul>
+                 <li>Vertical scrolling content at a width equivalent to 320 CSS pixels;</li>
+                 <li>Horizontal scrolling content at a height equivalent to 256 CSS pixels.</li>
+                 </ul>
+                 <p>Except for parts of the content which require two-dimensional layout for usage or meaning.</p>
+                 </td>
+                 <td headers="d3">
+                 <ul>
+                 <li>Use Responsive Web Design (RWD) from the conception of design itself</li>
+                 <li>Use accessible links, modals, toggle type elements to show or hide content</li>
+                 <li>Avoid horizontal scroll bars in 400%zoom</li>
+                 <li>Avoid content overlaps, clipping, content loss and functionality loss.</li>
+                 </ul>
+                 </td>
+                 </tr>
+                 <tr>
+                 <th headers="d1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-4-11-non-text-contrast/">1.4.11 Non-text Contrast</a></th>
+                 <td headers="d2">The visual presentation of the following have a contrast ratio of at least 3:1 against<br>adjacent color(s):
+                 <p>&nbsp;</p>
+                 <p>&nbsp;</p>
+                 <dl>
+                 <dt>User Interface Components:</dt>
+                 <dd>Visual information required to identify user interface components and states, except for<br>inactive components or where the appearance of the component is determined by the user agent<br>and not modified by the author;</dd>
+                 <dt>Graphical Objects:</dt>
+                 <dd>Parts of graphics required to understand the content, except when a particular presentation<br>of graphics is essential to the information being conveyed.</dd>
+                 </dl>
+                 </td>
+                 <td headers="d3">
+                 <ul>
+                 <li>Ensure hit-areas and focus indicators have 3:1 contrast ratio with their inner or outer background</li>
+                 <li>Ensure the checked/unchecked states meet the 3:1 ratio against their adjacent color in order to distinguish the states</li>
+                 <li>Ensure parts of graphs and charts where color is the only way to decipher the information, the contrast ratio is met against adjacent colors</li>
+                 <li>Ensure appropriate color combinations are chosen and defined for UI elements and other graphical objects in the style guides and the design documents in order to avoid uncomfortable retrofitting.</li>
+                 </ul>
+                 </td>
+                 </tr>
+                 <tr>
+                 <th headers="d1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-4-12-text-spacing/">1.4.12 Text Spacing</a></th>
+                 <td headers="d2">In content implemented using markup languages that support the following text style properties, no<br>loss of content or functionality occurs by setting all of the following and by changing no other<br>style property:
+                 <p>&nbsp;</p>
+                 <p>&nbsp;</p>
+                 <ul>
+                 <li>Line height (line spacing) to at least 1.5 times the font size;</li>
+                 <li>Spacing following paragraphs to at least 2 times the font size;</li>
+                 <li>Letter spacing (tracking) to at least 0.12 times the font size;</li>
+                 <li>Word spacing to at least 0.16 times the font size.</li>
+                 </ul>
+                 <p>Exception: Human languages and scripts that do not make use of one or more of these text style<br>properties in written text can conform using only the properties that exist for that combination<br>of language and script.</p>
+                 </td>
+                 <td headers="d3">
+                 <ul>
+                 <li>Don’t use fixed containers in your CSS styles.</li>
+                 <li>Make sure that content reflows without overlapping or text cut-offs</li>
+                 <li>Use relative units of font size, line height, spaces between characters, words, lines and paragraphs.</li>
+                 </ul>
+                 </td>
+                 </tr>
+                 <tr>
+                 <th headers="d1" scope="row"><a href="https://www.digitala11y.com/understanding-sc-1-4-13-content-on-hover-or-focus/">1.4.13 Content on Hover or Focus</a></th>
+                 <td headers="d2">Where receiving and then removing pointer hover or keyboard focus triggers additional content to<br>become visible and then hidden, the following are true:
+                 <p>&nbsp;</p>
+                 <p>&nbsp;</p>
+                 <dl>
+                 <dt>Dismissable:</dt>
+                 <dd>A mechanism is available to dismiss the additional content without moving pointer hover or<br>keyboard focus, unless the additional content communicates an input error or does not<br>obscure or replace other content;</dd>
+                 <dt>Hoverable:</dt>
+                 <dd>If pointer hover can trigger the additional content, then the pointer can be moved over the<br>additional content without the additional content disappearing;</dd>
+                 <dt>Persistent:</dt>
+                 <dd>The additional content remains visible until the hover or focus trigger is removed, the user<br>dismisses it, or its information is no longer valid.</dd>
+                 </dl>
+                 <p>Exception: The visual presentation of the additional content is controlled by the user agent and<br>is not modified by the author.</p>
+                 </td>
+                 <td headers="d3">
+                 <ul>
+                 <li>Provide a method to dismiss the additional content that appear on hover or keyboard focus.</li>
+                 <li>Make sure that content is present until the user moves away the mouse pointer from the triggering element or content block.</li>
+                 <li>Make sure that experience is persistent.</li>
+                 </ul>
+                 </td>
+                 </tr>
+                 </tbody>
+                 </table>
+                                                                               </div>
+                                                                           </div>
+                                                                       </div>
+                                                                       <div class="panel panel-success">
+                                                                           <div class="panel-heading" role="tab" id="headingTwo2">
+                                                                               <h4 class="panel-title">
+                                                                                   <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#6" aria-expanded="false" aria-controls="collapseTwo">
+                                                                                       Operable
+                                                                                   </a>
+                                                                               </h4>
+                                                                           </div>
+                                                                           <div id="6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo2" aria-expanded="false" style="height: 0px;">
+                                                                               <div class="panel-body">
+                                                                                 <table>
+<tbody>
+<tr>
+<th id="d4">Check-point</th>
+<th id="d5">Summary</th>
+<th id="d6">Points to Ponder</th>
+</tr>
+<tr>
+<td id="ga8" colspan="3">
+<h4>Guideline 2.4 Navigable</h4>
+</td>
+</tr>
+<tr>
+<th headers="d4" scope="row"><a href="https://www.digitala11y.com/2-4-5-multiple-ways-to-locate-web-pages/">2.4.5 Multiple Ways</a></th>
+<td headers="d5">Provide multiple ways to identify the required page in a set of pages. Eg: Provide<br>search, sitemap.</td>
+<td headers="d6">
+<ul>
+<li>More than one way must be available to meet this success criteria</li>
+<li>Though breadcrumb is quite old, it still works if the users want to go back in a process or a layered structure</li>
+<li>Search function is most powerful to achieve faster navigation.</li>
+<li>Menus may become larger and cumbersome; still they work wonders when you look up for a category.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="d4" scope="row"><a href="https://www.digitala11y.com/headings-labels-understanding-sc-2-4-6/">2.4.6 Headings and Labels</a></th>
+<td headers="d5">The text within the headings and the labels should describe the intent before the user<br>interacts with them.</td>
+<td headers="d6">
+<ul>
+<li>Headings must be clear, concise &amp; descriptive</li>
+<li>Headings must follow a sequential order to avoid confusion.</li>
+<li>Ensure that headings are consistent throughout the site</li>
+<li>Ensure that labels are descriptive enough so that users can take necessary actions</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th headers="d4" scope="row"><a href="https://www.digitala11y.com/focus-visible-understanding-sc-2-4-7/">2.4.7 Focus visible</a></th>
+<td headers="d5">Provide a clearly visible focus indicator for all the interactive elements. When the<br>user navigates through the page, they should be able to identify their current location without<br>difficulty.</td>
+<td headers="d6">
+<ul>
+<li>Let browsers handle the visible focus for active elements</li>
+<li>ensure that active element is provided with visible focus.</li>
+<li>Ensure that when the user is navigating through the page using keyboard visible focus moves along for every element presented on the page</li>
+<li>Ensure that there is sufficient contrast between the visible focus &amp; the background of the element, for example if the visible focus is black &amp; the background of the element is black then focus visible is not visually distinguishable.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+                                                                               </div>
+                                                                           </div>
+                                                                       </div>
+                                                                       <div class="panel panel-danger">
+                                                                           <div class="panel-heading" role="tab" id="headingThree3">
+                                                                               <h4 class="panel-title">
+                                                                                   <a class="" data-toggle="collapse" data-parent="#accordion2" href="#7" aria-expanded="true" aria-controls="collapseThree">
+                                                                                       Understandable
+                                                                                   </a>
+                                                                               </h4>
+                                                                           </div>
+                                                                           <div id="7" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree3" aria-expanded="true" style="">
+                                                                               <div class="panel-body">
+                                                                                 <table>
+         <tbody>
+         <tr>
+         <th id="d7">Check-point</th>
+         <th id="d8">Summary</th>
+         <th id="d9">Read more</th>
+         </tr>
+         <tr>
+         <td id="ga9" colspan="3">
+         <h4>Guideline 3.1: Readable</h4>
+         </td>
+         </tr>
+         <tr>
+         <th headers="d7" scope="row"><a href="https://www.digitala11y.com/understanding-sc-3-1-2-language-of-parts/">3.1.2 Language of parts</a></th>
+         <td headers="d8">If any text or element on the web page has a different language than the primary<br>language, programmatically define the language for that content.</td>
+         <td headers="d9">
+         <ul>
+         <li>Ensure to use appropriate language code (lang=”fr”) wherever the text is in other language</li>
+         <li>Ensure appropriate language token is used in the lang attribute (lang=”pt-br”).</li>
+         <li>Beware of the exceptions too.</li>
+         </ul>
+         </td>
+         </tr>
+         <tr>
+         <td id="ga10" colspan="3">
+         <h4>Guideline 3.2 Predictable</h4>
+         </td>
+         </tr>
+         <tr>
+         <th headers="d7" scope="row"><a href="https://www.digitala11y.com/3-2-3-consistent-navigation/">3.2.3 Consistent Navigation</a></th>
+         <td headers="d8">Navigation mechanisms repeated on multiple web pages within a set of web pages must be<br>consistent each time they are available.</td>
+         <td headers="d9">
+         <ul>
+         <li>keep navigational menus in the same location.</li>
+         <li>present the navigational menus in the same order on all pages.</li>
+         <li>Represent all the standard elements like logo, search functionality, and skip links etc. in the same location on all the pages.</li>
+         <li>using a standard template will help achieve to pass the success criteria of 3.2.3 consistent navigation.</li>
+         </ul>
+         </td>
+         </tr>
+         <tr>
+         <th headers="d7" scope="row"><a href="https://www.digitala11y.com/3-2-4-consistent-identification/">3.2.4 Consistent Identification</a></th>
+         <td headers="d8">Ensure that the components that have same functionality are identified consistently<br>through-out the website.</td>
+         <td headers="d9">
+         <ul>
+         <li>Icons &amp; images that are used repeatedly and provide the same function must be provided with same alternative text.</li>
+         <li>Elements with same function are named &amp; labelled consistently.</li>
+         <li>Use icons/images that are consistent. For example print, twitter, Facebook etc.</li>
+         <li>Images will have different meaning in different context, so will need different alternative text depending on the context.</li>
+         </ul>
+         </td>
+         </tr>
+         <tr>
+         <td id="ga11" colspan="3">
+         <h4>Guideline 3.3: Input Assistance</h4>
+         </td>
+         </tr>
+         <tr>
+         <th headers="d7" scope="row"><a href="https://www.digitala11y.com/understanding-sc-3-3-3-error-suggestion/">3.3.3 Error Suggestion</a></th>
+         <td headers="d8">If the errors for user input are identified and suggestions for correction are known,<br>provide them if the suggestions does not jeopardize the security or purpose.</td>
+         <td headers="d9">
+         <ul>
+         <li>Provide descriptive errors</li>
+         <li>Provide visible hints that will enable the users to avoid errors during form submissions</li>
+         <li>Associate the errors with form controls using aria-describedby</li>
+         <li>Move the focus to the form control that has the error once validation failed, this reduces the number of key strokes</li>
+         <li>Mark the required fields with asterisk visually &amp; programmatically with aria-required.</li>
+         </ul>
+         </td>
+         </tr>
+         <tr>
+         <th headers="d7" scope="row"><a href="https://www.digitala11y.com/understanding-sc-3-3-4-error-prevention-legal-financial-data/">3.3.4 Error Prevention (Legal, Financial, Data)</a></th>
+         <td headers="d8">Provide a mechanism to review and confirm the submission when the form include legal,<br>financial or data.</td>
+         <td headers="d9">
+         <ul>
+         <li>Make sure proper hints are provided to fill the data in the forms</li>
+         <li>Provide a review information screen where user provided information is populated</li>
+         <li>Provide a checkbox where user can confirm that they have reviewed all the information and they are ready to submit; enable the submit button only when user checks the checkbox</li>
+         <li>Provide confirmation screen or dialogue when users delete any data.</li>
+         </ul>
+         </td>
+         </tr>
+         </tbody>
+         </table>
+
+                                                                               </div>
+                                                                           </div>
+                                                                       </div>
+                                                                       <div class="panel panel-info">
+                                                                           <div class="panel-heading" role="tab" id="headingThree3">
+                                                                               <h4 class="panel-title">
+                                                                                   <a class="" data-toggle="collapse" data-parent="#accordion2" href="#8" aria-expanded="true" aria-controls="collapseThree">
+                                                                                       Robust
+                                                                                   </a>
+                                                                               </h4>
+                                                                           </div>
+                                                                           <div id="8" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree3" aria-expanded="true" style="">
+                                                                               <div class="panel-body">
+                                                                                 <table style="height: 223px;" width="730">
+<tbody>
+<tr>
+<th id="d10">Check point</th>
+<th id="d11">Summary</th>
+<th id="d12">Points to Ponder</th>
+</tr>
+<tr>
+<td id="ga13" colspan="3">
+<h4>Guideline 4.1 Compatible</h4>
+</td>
+</tr>
+<tr>
+<th headers="d10" scope="row"><a href="https://www.digitala11y.com/understanding-sc-4-1-3-status-messages/">4.1.3 Status Messages</a></th>
+<td headers="d11">In content implemented using markup languages, status messages can be programmatically<br>determined through role or properties such that they can be presented to the user by assistive<br>technologies without receiving focus.</td>
+<td headers="d12">
+<ul>
+<li>Ensure all success toasts and error messages are announced by screen reader</li>
+<li>Do not fill the pages with live regions. Decide which is an important update and qualifies a status message intelligently</li>
+<li>Ensure focusable messages are not considered as status messages.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+                                                                               </div>
+                                                                           </div>
+                                                                       </div>
+
+                                                                   </div>
+                                                               </div>
+                                                            </div>
+                                                        </div>
+
+</div>
+
+
+
+
+{% endblock %}

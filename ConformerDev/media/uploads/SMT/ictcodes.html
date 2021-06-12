@@ -1,0 +1,900 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ictcodes - Software Development Company</title>
+    <link rel="icon" href="img/ict.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <script src="js/vendor/modernizr-2.8.1.min.js"></script>
+<style>
+
+.sub-menu-parent { position: relative; }
+
+.sub-menu {
+  visibility: hidden; /* hides sub-menu */
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-2em);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+.sub-menu-parent:focus .sub-menu,
+.sub-menu-parent:focus-within .sub-menu,
+.sub-menu-parent:hover .sub-menu {
+  visibility: visible; /* shows sub-menu */
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+}
+
+/* presentational */
+/* body { padding: 2%; font: 18px/1.4 sans-serif; } */
+
+ #a { color: rgb(255, 255, 255); display: block; padding: 1.5em 4em; text-decoration: none; }
+ #a:hover { color: white; }
+ ul,
+ .sub-menu { list-style-type: none; padding: 2; margin: 5; }
+
+.sub-menu { background: #EEE; text-align: center;}
+ .sub-menu-parent  { display: inline-block; }
+ /* ul > li:first-child { border-left: none; } */
+
+.sub-menu {
+  background: rgb(14, 13, 13);
+
+}
+</style>
+
+
+</head>
+
+
+<body>
+
+<div id="main" class="main-content-wraper">
+    <div class="main-content-inner">
+
+        <!--start header section-->
+        <header class="header">
+            <!--start navbar-->
+            <div class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="navbar-header page-scroll">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                    data-target="#myNavbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand page-scroll" href="index.html">
+                                <img src="img/pngws.png" alt="logo">
+                            </a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="navbar-collapse collapse" id="myNavbar">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a class="page-scroll" href="index.html">Home</a></li>
+                                <li><a class="page-scroll" href="index.html#about" style="padding-left:45px;">About</a></li>
+                                <!-- <li><a class="page-scroll" href="#services">Services</a></li> -->
+
+                                <li class="sub-menu-parent" tab-index="0"><a class="" id="a" href="Services.html">Services</a>
+                                    <ul class="sub-menu" style="line-height: 36px;">
+                                            <li><a href="Services.html">Software Development</a></li>
+                                            <li><a href="testing.html">Software Testing</a></li>
+                                            <li><a href="ui-ux.html">UI/UX</a></li>
+                                            <li><a href="training.html">Training</a></li>
+                                          </ul>
+                                </li>
+                                <li><a class="page-scroll" href="index.html#features" style="padding-left:0px;">Features</a></li>
+                                <!-- <li><a class="page-scroll" href="#pricing">Pricing</a></li> -->
+                                <li><a class="page-scroll" href="#contact" style="padding-left:45px;">Contact</a></li>
+                                <!-- <li>
+                                    <div class="try-free-btn">
+                                        <a href="#" class="btn softo-free-btn">Try it Free</a>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end navbar-->
+        </header>
+        <!--end header section-->
+
+        <!--start slider section-->
+        <section id="hero-section" class="hero-slider-section">
+            <div class="owl-carousel owl-theme hero-background-slider custom-indicator">
+                <div class="item">
+                    <div class="slider-bg-content"
+                         style="background: url('img/hero-slider-bg-1.jpg')no-repeat center center / cover">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="slider-bg-contents-wrap">
+                                        <h1><span>ICT</span> Online Training</h1>
+                                        <p>It's never late to start from the pioneers, We have self-paced and customized which suits an individual'sspecific learning needs,Find out more </p>
+                                    </div>
+                                    <div class="hero-action-btn">
+                                        <a href="http://training.ictcodes.net/"
+                                           class="btn softo-solid-btn">Learn More</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="slider-bg-content"
+                         style="background: url('img/hero-slider-bg-2.jpg')no-repeat center center / cover">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="slider-bg-contents-wrap">
+                                        <h1>Enterprise <span>Software</span> Development</h1>
+                                        <p>Dynamically integrate intuitive customer service via cross-media
+                                            infrastructures. Quickly deliver value-added scenarios after
+                                            collaborative portals.</p>
+                                    </div>
+                                    <div class="hero-action-btn">
+                                        <a href="Services.html"
+                                           class="btn softo-solid-btn">Our Services</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="slider-bg-content"
+                         style="background: url('img/hero-slider-bg-3.jpg')no-repeat center center / cover">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="slider-bg-contents-wrap">
+                                        <h1>Marketing and <span>Business</span> Solution</h1>
+                                        <p>Completely morph efficient technology and B2C bandwidth. Implement the latest digital Marketing trends for your business.</p>
+                                    </div>
+                                    <div class="hero-action-btn">
+                                        <a href="Services.html"
+                                           class="btn softo-solid-btn">Our Services</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end slider section-->
+
+        <!--start promo section-->
+        <!-- <section class="promo-section ptb-90">
+            <div class="promo-section-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single-promo-section text-center bg-secondary">
+                                <span class="ti-ticket"></span>
+                                <h6>Ticket management</h6>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single-promo-section text-center bg-secondary">
+                                <span class="ti-comment"></span>
+                                <h6>Live messaging</h6>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single-promo-section text-center bg-secondary">
+                                <span class="ti-email"></span>
+                                <h6>Email workflow</h6>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="single-promo-section text-center bg-secondary">
+                                <span class="ti-cloud-up"></span>
+                                <h6>File upload</h6>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!--end promo section-->
+
+        <!--start why gosofto-->
+        <section id="about" class="bg-secondary why-gosofto ptb-90">
+            <div class="why-gosofto-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-heading text-center">
+                                <h3>Who We Are?</h3>
+                                <p>It was during the college days, the seeds of beginning a startup venture was first sown in to our minds, leading us to gather feedbacks and opinions from the experts. the first choice was ICT to begin a devil company. What better place than , one of the first computer training academies in Kerala since 1990. Ushering us to, devoloping the training academy to a devolopment company. Hence the establishment 'ictodes Pvt. Ltd.'. The finest accomplishment of any business venture is the successful execution and the best team with full of passion and talent paved our way to achieve the very same success. The satisfaction of the clients defines any company. With the quality of service provided by ictcodes, we guarantee to fulfill every requirement of the clientele. To assure this, we provide our clients with a sturdy group of technologists and software professionals, who are prominent in the fields of web, windows and mobile solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="why-us-contents">
+
+                                <p>Our method of problem solving is precise at every moment and we follow a fixed step with complete documentation till we reach at the destination</p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="about-new-promo">
+                                        <span class="ti-vector"></span>
+                                        <h6>Analysis</h6>
+                                        <p>After the discussion we analyse the complete requirments thoroughly and finding the possible solutions.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="about-new-promo">
+                                        <span class="ti-rss-alt"></span>
+                                        <h6>Solution</h6>
+                                        <p>We Find the best method to solve your problems with the latest technology stack in very short period.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="about-new-promo">
+                                        <span class="ti-cup"></span>
+                                        <h6>Submission</h6>
+                                        <p>Considering the complete interests of our clients, we will deliver the solution effectively after testing.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="about-new-promo">
+                                        <span class="ti-headphone-alt"></span>
+                                        <h6>Support</h6>
+                                        <p>We will provide complete support on our solutions at any point of time</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="why-us-img-three">
+                                <img src="img/about-image-1.png" alt="Why GoSofto" class="about-screen img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end why gosofto-->
+
+
+
+        <!--start software overview section-->
+        <section id="services" class="overview-section ptb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading text-center white-text">
+                            <h3 class="white-text">Services</h3>
+                            <p>We provide end-to-end software and mobile application development services. We take you from creating the concept and design, through to developing and delivering the final product that will delight your customers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="nav-center">
+                            <ul class="nav nav-tabs">
+                                <li><a href="#nav-1" data-toggle="tab">
+                                    <span class="ti-wallet"></span>
+                                    Software Development
+                                </a></li>
+                                <li><a href="#nav-2" data-toggle="tab">
+                                    <span class="ti-layout"></span>
+                                    Software Testing
+                                </a></li>
+                                <li class="active"><a href="#nav-3" data-toggle="tab">
+                                    <span class="ti-harddrives"></span>
+                                    UI/UX
+                                </a></li>
+                                <li><a href="#nav-4" data-toggle="tab">
+                                    <span class="ti-agenda"></span>
+                                    Training
+                                </a></li>
+
+                            </ul>
+                        </div>
+
+                        <div class="tab-content-wrap">
+                            <!--<img src="img/macbook.png" alt="" class="overview-mac-image">-->
+                            <div class="tab-content clearfix">
+                                <div class="tab-pane fade" id="nav-1">
+                                    <div class="col-md-6">
+                                        <div class="overview-feature-content-image">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="overview-feature-content">
+                                            <h6>SOFTWARE DEVELOPMENT</h6>
+                                            <p>From analysing the requirment of the problem till reaching the solution is a procedure oriented proces. In order to develop at speed and with creativity, look to our software development services.</p>
+                                            <ul class="overview-list">
+                                                <li><span class="ti-mobile"></span> Mobile Development</li>
+                                                <li><span class="ti-world"></span> Web Development</li>
+                                                <li><span class="ti-package"></span> Product Development</li>
+                                                <li><span class="ti-harddrives"></span> Software Architecture</li>
+                                            </ul>
+                                            <div class="row">
+                                                    <div class="col-sm-4 mt-20">
+                                                        <a href="Services.html"><button type="submit" class="btn softo-solid-btn pull-right"
+                                                                id="btnServices">
+                                                            SEE ALL SERVICES
+                                                        </button></a>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-2">
+                                    <div class="col-md-6">
+                                        <div class="overview-feature-content">
+                                            <h6>SOFTWARE TESTING</h6>
+                                            <p>The Software build should be a resourceful repository of Quality Content on Quality. The software testing presents significant business risks, from losing customers to affecting reputation. We can help you on that.  </p>
+                                            <ul class="overview-list">
+                                                <li><span class="ti-vector"></span> QA & Testing</li>
+                                                <li><span class="ti-shift-right-alt"></span> Functional Testing</li>
+                                                <li><span class="ti-notepad"></span> Non Functional Testing</li>
+
+                                            </ul>
+                                            <div class="row">
+                                                    <div class="col-sm-4 mt-20">
+                                                        <a href="testing.html"><button type="submit" class="btn softo-solid-btn pull-right"
+                                                                id="btnServices">
+                                                            SEE ALL SERVICES
+                                                        </button></a>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="overview-feature-content-image">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade active in" id="nav-3">
+                                    <div class="col-md-6">
+                                        <div class="overview-feature-content-image">
+                                            <img src="img/tab-image-2.png" alt="image dibe" class="img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="overview-feature-content">
+                                            <h6>UI/UX</h6>
+                                            <p>Expectations are growing day by day on every aspects. The user experience determines the success or failure whether you are developing for consumers or  for businesses.</p>
+                                            <ul class="overview-list">
+                                                <li><span class="ti-mobile"></span> Mobile UI/UX Design</li>
+                                                <li><span class="ti-world"></span>Website UI/UX Design</li>
+                                                <li><span class="ti-layout-sidebar-left"></span> UX Optimisation </li>
+                                                <li><span class="t-cup"></span> </li>
+                                                <div class="row">
+                                                        <div class="col-sm-12 mt-20">
+                                                            <a href="ui-ux.html"><button type="submit" class="btn softo-solid-btn pull-right"
+                                                                    id="btnServices">
+                                                                SEE ALL SERVICES
+                                                            </button></a>
+                                                        </div>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-4">
+                                    <div class="col-md-6">
+                                        <div class="overview-feature-content">
+                                            <h6>TRAINING</h6>
+                                            <p>We started to train since 1990. Its never late to start train from the pioneers. We help aspiring employees to learn the skills they need to succeed in the digital world.</p>
+                                            <ul class="overview-list">
+                                                <li><span class="ti-pencil-alt2"></span> Python</li>
+                                                <li><span class="ti-slice"></span> Angular</li>
+                                                <li><span class="ti-pencil"></span> .NET</li>
+                                                <li><span class="ti-ruler-pencil"></span> Mobile App</li>
+                                                <li><span class="ti-ink-pen"></span> PHP</li>
+                                                <li><span class="ti-marker-alt"></span> Microsoft Office Specialist</li>
+                                            </ul>
+                                            <div class="row">
+                                                    <div class="col-sm-4 mt-20">
+                                                        <a href="training.html"><button type="submit" class="btn softo-solid-btn pull-right"
+                                                                id="btnServices">
+                                                            SEE ALL SERVICES
+                                                        </button></a>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="overview-feature-content-image">
+                                            <img src="img/tab-image-4.png" alt="324234" class="img-responsive">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end software overview section-->
+
+        <!--start our features-->
+        <section id="features" class="our-features ptb-90">
+            <div class="our-features-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-heading text-center">
+                                <h3>We Bring Your Ideas to Life</h3>
+                                <p>You have ideas – we'll support you in transforming them into innovation, verifying feasibility and bringing you from the development stage all the way to market success. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="biz-home-single-service bg-secondary  height-200">
+                                <div class="home-service-text service-style-one">
+                                    <span class="ti-package"></span>
+                                    <h5>Vision and mission </h5>
+                                    <p>To bring worthy value negation to the customer circle,by the best in the field of marketing. Our efficient strategy ensures to achieve, the requirements for an upcoming establishment</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="biz-home-single-service bg-secondary height-200">
+                                <div class="home-service-text service-style-one">
+                                    <span class="ti-shopping-cart"></span>
+                                    <h5>Designers</h5>
+                                    <p>User-experience is at the heart of everything we do. As such, our designers strive to make your products look as beautiful as possible.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="biz-home-single-service bg-secondary height-200">
+                                <div class="home-service-text service-style-one">
+                                    <span class="ti-shield"></span>
+                                    <h5>Developers</h5>
+                                    <p>We take your ideas, and turn them into reality. Innovative code is used to ensure that the website is bug-free and compatible with a multitude of platforms.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="biz-home-single-service bg-secondary height-200">
+                                <div class="home-service-text service-style-one">
+                                    <span class="ti-clipboard"></span>
+                                    <h5>Friendly atmosphere</h5>
+                                    <p>Friendly working and learning atmosphere inside the company. We provide training programs for freshers to help them achieve their passion.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="biz-home-single-service bg-secondary height-200">
+                                <div class="home-service-text service-style-one">
+                                    <span class="ti-pie-chart"></span>
+                                    <h5>Our team</h5>
+                                    <p>Innovative techniques and expertise in design and development ensure your message is conveyed in a refined manner. Our expert IT team, focuses on creativity and technology to deliver a quality product.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                                <div class="biz-home-single-service bg-secondary height-200">
+                                    <div class="home-service-text service-style-one">
+                                        <span class="ti-credit-card"></span>
+                                        <h5>User experience</h5>
+                                        <p>We believe in enhancing customer experience with the use of trending digital channels and successful strategies integrated as part of marketing activities.</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <a href="team.html"><button type="submit" class="btn softo-solid-btn pull-center" id="btnServices" style="margin: 0;
+    position: absolute;left: 50%; -ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);">MEET OUR TEAM</button></a>
+
+
+                </div>
+            </div>
+        </section>
+        <!--end our features-->
+
+        <!--start counter section-->
+        <section class="bg-secondary counter-section ptb-70">
+            <div class="counter-section-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                                <div class="counter-content-wrap text-center">
+                                        <h3>We Made connections over the world rapidly</h3>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="singl-counter">
+                                                <h4>2</h4>
+                                                <p>Year</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="singl-counter">
+                                                <h4>7</h4>
+                                                <p>Countries</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="singl-counter">
+                                                <h4>35+</h4>
+                                                <p>Clients</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="singl-counter">
+                                                <h4>50+</h4>
+                                                <p>Projects</p>
+                                            </div>
+                                        </div>
+                                </div>
+                            <div class="counter-text text-center">
+                                <p>Be with us for the best experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end counter section-->
+
+        <!--start my pricing plan-->
+
+        <!--end my pricing plan-->
+
+        <!--start call to action section-->
+
+        <!--end call to action section-->
+
+        <!--client feedback section start-->
+        <section class="bg-secondary client-feedback-section ptb-90">
+            <div class="client-feedback-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-heading text-center">
+                                <h3>Client's Feedback</h3>
+                                <p>Streamlining different processes and workflows by using user access control Onebook prompts efficiency and productivity levels of an organization, and reduces operating costs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="testimonial-section">
+                                <div class="owl-carousel owl-theme testimonial-slider custom-carousel">
+                                    <div class="item">
+                                        <div class="testimonial-single bg-white">
+                                            <h6>Fysal <a href="#" target="_blank">Green Line Trading</a></h6>
+                                            <p>Excellent work by keeping the time perfectly with the best design and implementation </p>
+
+                                            <div class="testimonial-ratting">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimonial-single bg-white">
+                                            <h6>Joy  <a href="#" target="_blank">Super Express</a></h6>
+                                            <p>This work is very good and saves a lots of time. Good customer
+                                                support too. Few areas could be improved specially on the
+                                                intuitivity front, but it is very good already.</p>
+                                            <div class="testimonial-ratting">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-o"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimonial-single bg-white">
+                                            <h6> Sabith <a href="#" target="_blank">Mas Logistics</a></h6>
+                                            <p>Good Customer Support. I like the way they deal with the customer with plaesance along with quality</p>
+                                            <div class="testimonial-ratting">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--client feedback section end-->
+
+        <!--start customers section -->
+        <div class="bg-secondary customers-section pb-50">
+            <div class="customers-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="customers-content">
+                            <div class="owl-carousel owl-theme customers-slider">
+                                <div class="item">
+                                    <img src="img/client/customer-logo-1.png" alt="client logo">
+                                </div>
+                                <div class="item">
+                                    <img src="img/client/customer-logo-2.png" alt="client logo">
+                                </div>
+                                <div class="item">
+                                    <img src="img/client/customer-logo-3.png" alt="client logo">
+                                </div>
+                                <div class="item">
+                                    <img src="img/client/customer-logo-4.png" alt="client logo">
+                                </div>
+                                <div class="item">
+                                    <img src="img/client/customer-logo-7.png" alt="client logo">
+                                </div>
+                                <div class="item">
+                                    <img src="img/client/customer-logo-8.png" alt="client logo">
+                                </div>
+                                <div class="item">
+                                    <img src="img/client/customer-logo-10.png" alt="client logo">
+                                </div>
+                                <div class="item">
+                                    <img src="img/client/customer-logo-9.png" alt="client logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end customers section-->
+
+        <!--contact us section start-->
+        <section class="contact-info-section ptb-40">
+                <div class="auto-container">
+                    <h2>Any Queries? Don’t Hesitate? Feel Free to Make a Call</h2>
+                    <div class="info-blocks">
+                        <div class="row clearfix">
+                            <!--Info Block-->
+                            <div class="info-block col-md-6 col-sm-6 col-xs-12">
+                                <div class="inner inner-left">
+                                    <div class="icon-box">
+                                        <span class="icon fa fa-envelope-o"></span>
+                                    </div>
+                                    <div class="text">info@ictcodes.net</div>
+                                </div>
+                            </div>
+
+                            <!--Info Block-->
+                            <div class="info-block col-md-6 col-sm-6 col-xs-12">
+                                <div class="inner inner-right">
+                                    <div class="icon-box">
+                                        <span class="icon fa fa-phone"></span>
+                                    </div>
+                                    <div class="text"> +91 9400 544 735</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <section id="contact" class="contact-us ptb-90">
+            <div class="contact-us-wrap">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="choose-area bg-secondary">
+                            <div class="col-md-6 col-76 p-0">
+                                <div class="choose-wrapper">
+                                    <form action="#" method="post" class="contact-us-form" novalidate="novalidate">
+                                        <h6>Reach us quickly</h6>
+                                        <div class="row">
+                                            <div class="col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="name"
+                                                           placeholder="Enter name" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" id="email"
+                                                           placeholder="Enter email" required="required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <input type="number" name="phone" value="" class="form-control"
+                                                           id="phone" placeholder="Your Phone">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-xs-12">
+                                                <div class="form-group">
+                                                    <input type="text" name="company" value="" size="40"
+                                                           class="form-control" id="company" placeholder="Your Company">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="form-group">
+                                                    <textarea name="message" id="message" class="form-control" rows="9"
+                                                              cols="25" placeholder="Message"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 mt-20">
+                                                <button type="submit" class="btn softo-solid-btn pull-right"
+                                                        id="btnContactUs">
+                                                    Send Message
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-6 p-0 choose-img">
+                                <div class="footer-address">
+                                    <p>It's very easy to get in touch with us. Just use the contact form or pay us a visit for a coffee at the office.</p>
+                                    <ul>
+                                        <li><i class="fa fa-map-marker"></i> <span>Above KSFE & MDC bank, Near Kottakkal Bus stand, Kottakkal, Malappuram</span>
+                                        </li>
+                                        <li><i class="fa fa-phone"></i> <span>Phone: +91 9400 544 735</span></li>
+                                        <li><i class="fa fa-envelope-o"></i> <span>Email : <a href="mailto:info@ictcodes.net">info@ictcodes.net</a></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=ict%20codes&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de/beste-wordpress-themes/">pureblack.de</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+                                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.840108181589!2d144.95373631531888!3d-37.8172139797519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sbd!4v1534105266043" style="border:0" allowfullscreen></iframe> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--contact us section end-->
+
+        <!--start footer section-->
+        <footer class="bg-secondary footer-section ptb-60">
+            <div class="footer-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="col-md-4 col-sm-6">
+                                <div class="footer-single-col">
+                                    <h6>Company</h6>
+                                    <p>We are a software company based in India. We were established in 1990 as one of the first computer training academies in Kerala. We have a strong panel of experienced technologists and software professionals with expertise in web, windows and mobile solutions.</p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="footer-single-col">
+                                    <h6></h6>
+                                    <ul class="footer-link-list">
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="footer-single-col">
+                                    <h6>We are at</h6>
+                                    <ul class="footer-link-list">
+                                        <li><a href="#">Above KSFE & MDC Bank</a></li>
+                                        <li><a href="#">Near Bus Stand Kottakkal</a></li>
+                                        <li><a href="#">Malappuram, Kerala</a></li>
+                                        <li><a href="#">India</a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="footer-single-col" style="align-items: center">
+                                <img src="img/logocolor.png" alt="footer logo">
+                                <div class="footer-social-list">
+                                    <ul class="list-inline">
+                                        <li><a href="#"> <i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"> <i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"> <i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"> <i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"> <i class="fa fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="copyright-text">
+                                    <p>&copy; copyright <a href="http://ictcodes.net/">ictcodes</a> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--end footer section-->
+
+    </div><!--end main content inner-->
+</div>
+<!--end main container -->
+
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status">
+        <div class="softo-preloader"></div>
+    </div>
+</div>
+<!--end preloader-->
+
+<!--=========== all js file link ==============-->
+
+<!-- main jQuery -->
+<script src="js/jquery-3.3.1.min.js"></script>
+
+<!-- bootstrap core js -->
+<!--<script src="js/bootstrap.min.js"></script>-->
+
+<!-- smothscroll -->
+<script src="js/jquery.easeScroll.min.js"></script>
+
+<!--owl carousel-->
+<script src="js/owl.carousel.min.js"></script>
+
+<!-- scrolling nav -->
+<script src="js/jquery.easing.min.js"></script>
+
+<!--fullscreen background video js-->
+<script src="js/jquery.mb.ytplayer.min.js"></script>
+
+<!--typed js -->
+<script src="js/typed.min.js"></script>
+
+<!--magnific popup js-->
+<script src="js/magnific-popup.min.js"></script>
+
+<!-- custom script -->
+<script src="js/scripts.js"></script>
+
+</body>
+
+<!-- Mirrored from cssmaterial.com/gosofto/demo/index-6.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Apr 2019 21:51:53 GMT -->
+</html>

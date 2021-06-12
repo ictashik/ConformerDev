@@ -1,0 +1,40 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+<br>
+<br>
+<div class="col-md-12">
+                            <div class="panel panel-white">
+                                <div class="panel-heading clearfix">
+                                    <h4 class="panel-title">Recents Tests History</h4>
+                                </div>
+                                <div class="panel-body" style="text-align: center;">
+                                <div class="rows">
+                                <table id="example" class="table table-striped" style="width: 100%;" role="grid" aria-describedby="example_info">
+                                        <th>TestID</th>
+                                        <th>Time</th>
+                                        <th>File Path</th>
+                                        <th>#Lines</th>
+                                        <th>AE</th>
+                                          <th>SHV</th>
+                                              {% for item in tst %}
+                                              <tr>
+                                              <td> {{ item.testID }} </td>
+                                              <td> {{ item.testDateTime }} </td>
+                                              <td> {{ item.testFileURL }} </td>
+                                              <td> {{ item.totalLines }} </td>
+                                              <td> {{ item.AccessibilityExceptionCount }} </td>
+                                              <td> {{ item.StaticHTMLValidationCount }} </td>
+                                              </tr>
+                                              {% endfor %}
+                                  </table>
+                                        </div>
+              </div>
+                            </div>
+                        </div>
+
+
+
+
+{% endblock %}

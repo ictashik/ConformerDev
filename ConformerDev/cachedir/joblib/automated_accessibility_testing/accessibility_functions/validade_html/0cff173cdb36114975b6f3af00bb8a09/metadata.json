@@ -1,0 +1,1 @@
+{"duration": 0.9135181903839111, "input_args": {"html_recebido": "'<!DOCTYPE html>\\n<html lang=\"en\" dir=\"ltr\">\\n  <head>\\n    <meta charset=\"utf-8\">\\n    <title></title>\\n  </head>\\n  <body bgcolor=\"red\">\\n    <h1 style=\"color: purple\"> Hello World</h1>\\n    <img src=\"IMG.jpg\">\\n\\n  </body>\\n</html>\\n'"}}

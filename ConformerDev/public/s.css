@@ -1,0 +1,16 @@
+Morris.Donut({
+// ID of the element in which to draw the chart.
+element: 'morris4',
+// Chart data records -- each entry in this array corresponds to a point on
+// the chart.
+data: [
+  { label: 'HTML', value: {{ FCHTML }} },
+  { label: 'Stylesheets', value: {{ FCCSS }} },
+  { label: 'JavaScript', value: {{ FCJS }} },
+  { label: 'Pictures', value: {{ FCJPG }} },
+  { label: 'Raster', value: {{ FCPNG }} },
+  { label: 'Fonts', value: {{ FCTTF }} }
+
+],
+
+});

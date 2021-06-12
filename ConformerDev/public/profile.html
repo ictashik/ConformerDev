@@ -1,0 +1,31 @@
+{% extends 'basic.html' %}
+
+        {% load static %}
+
+{% block content %}
+<br>
+<br>
+
+<div class="col-md-3">
+                            <div class="user-profile-panel panel panel-white">
+                                <div class="panel-heading">
+                                    <div class="panel-title">User profile</div>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="{% static 'assets/images/avatar2.png' %}" class="user-profile-image img-circle" alt="">
+                                    <h4 class="text-center m-t-lg">{{ user.get_username }}</h4>
+                                    <p class="text-center">UI/UX Designer</p>
+                                    <hr>
+                                    <ul class="list-unstyled text-center">
+                                        <li><p><i class="icon-pointer m-r-xs"></i>Puducherry, India</p></li>
+                                        <li><p><i class="icon-envelope-open m-r-xs"></i><a href="#"></a>ictashik@gmail.com</p></li>
+                                        <li><p><i class="icon-link m-r-xs"></i><a href="#">ictcodes.net</a></p></li>
+                                    </ul>
+                                    <hr>
+                                    <a href="https://github.com/ictashik" class="btn btn-info btn-block"><i class="icon-plus m-r-xs"></i>View GitHub Profile</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+{% endblock %}

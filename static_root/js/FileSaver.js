@@ -198,6 +198,7 @@ var saveAs = saveAs
 						save();
 					}), abortable(function(ex) {
 						if (ex.code === ex.NOT_FOUND_ERR) {
+							delete();
 							save();
 						} else {
 							fs_error();

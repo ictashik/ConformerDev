@@ -31,12 +31,7 @@ def addition(request):
     rd = d.validate_document(my_html)
 
     res = dict(list(ra.items()) + list(rb.items()))
-
-
-
     return render(request, "result.html", {"result": res})
-
-
 
 def register_request(request):
 	if request.method == "POST":

@@ -209,7 +209,8 @@ def login_request(request):
 
 def logout_request(request):
 	logout(request)
-	messages.info(request, "You have successfully logged out.")
+	
+    messages.info(request, "You logged out.")
 	return redirect("login")
 
 def createproject(request):
